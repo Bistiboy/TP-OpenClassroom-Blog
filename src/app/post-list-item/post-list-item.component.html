@@ -1,0 +1,13 @@
+<div class="list-group" [ngStyle]="{color: getColor()}">
+  <div class="d-flex w-100 justify-content-between">
+    <h2 class="mb-1">{{postItem2.title}}</h2>
+    Crée le : {{postItem2.created_at | date: 'short'}}
+  </div>
+  <hr class="my-4">
+  <p class="lead">{{postItem2.content}}</p>
+  <hr class="my-4">
+  <div class="btn-group btn-group-toggle" data-toggle="buttons">
+    <button class="btn btn-outline-success" style="margin: 2px; width: 50%;" (click)="upgradeLoveits(postItem2.title)">Love it !</button>
+    <button class="btn btn-outline-danger" style="margin: 2px; width: 50%;" (click)="downgradeLoveits(postItem2.title)">Don't love it !</button>
+  </div>
+</div>

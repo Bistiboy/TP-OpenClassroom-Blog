@@ -1,0 +1,13 @@
+<h1 class="display-3">Posts</h1>
+<hr class="my-4">
+<ul class="list-group">
+  <div *ngFor="let post of postItem">
+    <li [ngClass]="{'list-group-item':true, 'list-group-item-success':post.loveIts > 0, 'list-group-item-danger':post.loveIts < 0 }" style="margin-bottom: 2px;">
+      <app-post-list-item [postItem2]="post"></app-post-list-item>
+    </li>
+  </div>
+</ul>
+
+
+
+
